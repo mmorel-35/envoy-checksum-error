@@ -20,5 +20,7 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version-file: go.mod
+
+    - run: go clean -modcache
     - run: go mod tidy
     - run: go build ./...
